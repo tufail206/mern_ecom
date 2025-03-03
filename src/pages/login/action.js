@@ -6,7 +6,10 @@ const action = async ({ request }) => {
     switch (request.method) {
       case "POST":
         const response = await axios
-          .post("http://localhost:5000/api/v1/login", data)
+          .post(
+            "https://mern-ecom-backend-alpha.vercel.app/api/v1/login",
+            data
+          )
           .then((res) => res.data);
         return response;
       default:
