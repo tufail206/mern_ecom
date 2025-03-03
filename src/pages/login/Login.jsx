@@ -23,7 +23,7 @@ const Login = () => {
     const submitOptions={
       method:"POST",
     encType: 'application/json',
-    action:"/login"
+    action:"/Login"
     }
      setIsSubmitting(true);
     submit(data, submitOptions);
