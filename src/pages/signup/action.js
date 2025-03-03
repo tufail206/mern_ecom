@@ -5,9 +5,12 @@ const action = async({request}) => {
     try {
        switch(request.method){
          case 'POST':
-            const response =await  axios.post(
-              "http://localhost:5000/api/v1/register", data    
-            ).then(res=>res.data)
+            const response = await axios
+              .post(
+                "https://mern-ecom-backend-alpha.vercel.app/api/v1/register",
+                data
+              )
+              .then((res) => res.data);
             return response;
          default:
            return "Invalid Method type"
