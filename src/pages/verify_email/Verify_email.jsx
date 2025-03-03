@@ -15,9 +15,11 @@ const Verify_email = () => {
       }
 
       try {
-        const res = await axios.get(
-          `http://localhost:5000/api/v1/verify-email?token=${token}`
-        ).then((response) => response.data);
+        const res = await axios
+          .get(
+            `https://mern-ecom-backend-alpha.vercel.app/api/v1/verify-email?token=${token}`
+          )
+          .then((response) => response.data);
     
         if (!res.success) {
           toast.error(data.message);
